@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leak Finder | Created by Happy</title>
+  <style>
+    body {background:#0d1117;color:#e6edf3;font-family:sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+    .box{background:#161b22;padding:30px;border-radius:16px;max-width:500px;width:90%;box-shadow:0 0 10px #000;}
+    input,button{width:100%;padding:12px;margin:6px 0;border-radius:8px;border:none;font-size:16px;}
+    input{background:#0d1117;color:#e6edf3;border:1px solid #30363d;}
+    button{background:#238636;color:#fff;cursor:pointer;}
+    button:hover{background:#2ea043;}
+    pre{background:#0d1117;border:1px solid #30363d;padding:10px;border-radius:8px;white-space:pre-wrap;max-height:300px;overflow:auto;}
+    .settings{margin-top:10px;color:#58a6ff;cursor:pointer;text-align:center;}
+    .hidden{display:none;}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>📂 Leak Finder</h2>
+    <p>Enter phone number (91**********)</p>
+    <input id="queryInput" placeholder="Enter number...">
+    <button onclick="searchLeak()">🔍 Search</button>
+    <pre id="resultBox">Results will appear here...</pre>
+    <button onclick="copyResults()">📋 Copy</button>
+    <div class="settings" onclick="toggleSettings()">⚙️ Settings</div>
+    <div id="settingsBox" class="hidden">
+      <input id="passwordInput" type="password" placeholder="Password">
+      <input id="newApiKey" type="password" placeholder="New API Token">
+      <button onclick="changeApi()">Change Token</button>
+    </div>
+    <p style="text-align:center;font-size:12px;color:#8b949e;">Created by Happy | For educational use only</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
